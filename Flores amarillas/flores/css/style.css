@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
+*{
+    font-family: 'Poppins',cursive;
+}
+body{
+    color: azure;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: 2rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    /* padding-top: -30; */
+}
+
+.botones{
+    padding: 9px;
+    border-radius: 80px;
+    background-color: transparent;
+    border: none;
+}
+
+.botones a{
+    background-color: #e90a85;
+    padding: 9px;
+    border-radius: 80px;
+    -webkit-border-radius: 80px;
+    -moz-border-radius: 80px;
+    -ms-border-radius: 80px;
+    -o-border-radius: 80px;
+
+}
+
+.botones a:focus{
+    background-color: rgb(194, 50, 146);
+}
+
+.greetings{
+    font-size: 7rem;
+    font-weight: 900;
+}
+.greetings > span{
+    animation: glow 2.5s ease-in-out infinite;
+}
+@keyframes glow{
+    0%, 100%{
+        color: #fff;
+        text-shadow: 0 0 12px #d639bc, 0 0 50px #d639a2, 0 0 100px #d639a2;
+    }
+    10%, 90%{
+        color: #111;
+        text-shadow: none;
+    }
+}
+.greetings > span:nth-child(2){
+    animation-delay: .2s ;
+}
+.greetings > span:nth-child(3){
+    animation-delay: .4s ;
+}
+.greetings > span:nth-child(4){
+    animation-delay: .6s;
+}
+.greetings > span:nth-child(5){
+    animation-delay: .8s;
+}
+.greetings > span:nth-child(6){
+    animation-delay: 1s;
+}
+
+.description{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    max-width: 90vw;
+    text-align: center;
+}
+
+.button a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: #111;
+}
+
+/* Desktop: 1200px en adelante */
+@media screen and (min-width:1200px){
+    .greetings{
+        font-size: 7rem;
+    }
+}
+
+/* Tablet: 768px a 1199px */
+@media screen and (min-width:768px) and (max-width:1199px){
+    .greetings{
+        font-size: 5.5rem;
+    }
+    .description{
+        font-size: 1.25rem;
+    }
+}
+
+/* Mobile: hasta 767px */
+@media screen and (max-width:767px){
+    .greetings{
+        display: block;
+        max-width: 100%;
+        font-size: clamp(2.8rem, 16vw, 4.5rem);
+        font-weight: 800;
+        text-align: center;
+    }
+    .description{
+        font-size: clamp(1rem, 5vw, 1.5rem);
+        text-align: center;
+    }
+
+    .button a{
+        font-size: 1rem;
+    }
+}
